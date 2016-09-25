@@ -4,32 +4,53 @@
     <meta charset="utf-8">
     <title>我的个人主页</title>
     <link rel="stylesheet" href="./css/change.css">
+    <script src="./js/jq.js"></script>
+    <script type="text/javascript">
+    $(function(){
+    var imgWid = 0 ;
+    var imgHei = 0 ; //变量初始化
+    var big = 1.1;//放大倍数
+    $(".banimg li").hover(function(){
+    $(this).find("img").stop(true,true);
+    var imgWid2 = 0;var imgHei2 = 0;//局部变量
+    imgWid = $(this).find("img").width();
+    imgHei = $(this).find("img").height();
+    imgWid2 = imgWid * big;
+    imgHei2 = imgHei * big;
+    $(this).find("img").css({"z-index":2});
+    $(this).find("img").animate({"width":imgWid2,"height":imgHei2,"margin-left":-imgWid2/2,"margin-top":-imgHei2/2});
+    },function(){$(this).find("img").stop().animate({"width":imgWid,"height":imgHei,"margin-left":-imgWid/2,"margin-top":-imgHei/2,"z-index":1});});
+    })
+    </script>
   </head>
   <body>
     <div class="contanier">
     <div class="header">
-      <div class="header_icon1">
-        <img src="./image/2.jpg" width="100" height="100">
-      </div>
+      <ul class="banimg">
+        <li>
+      <a href="#">  <img src="./image/13.jpg" width="200" height="200"></a>
+    </li>
+        </ul>
+
       <div class="header_h1">
         I LOVE DESIGN
       </div>
     <div class="header_h2">
       I'm glad that you visited my site where he can get to know me and my work.</div>
       <div class="header_icon2">
-        <img src="./image/3.jpg" width="50" height="50">
+      <a href="#"><img src="./image/3.jpg" width="50" height="50"></a>
        </div>
     </div>
 
     <div class="content1">
       <div class="content1_1">
-        <p>My name is Vlad Musienko, I'm a web designer. I love to draw and</p>
+        <p>My name is John Li, I'm a web designer. I love to draw and</p>
            <p>all that isconnected with the design. In this area a long time ago </p>
-            <p> and during this time I managed to create several successful</p>
-         projects used by people all over the world.</p><br>
+            <p> and during this time I managed to </p>
+          set up a few personal websites</p><br>
          <p>I love the simplicity in the design of web sites. As I see it,<p>
             <p>people,it's like my work. Naturally do not want to rest on our laurels and will</p>
-            <p>continue further studies to improve soybean skills, creating new</p>
+            <p>continue further studies to improve my skills, creating new</p>
             <p> interesting creative projects.</p>
        </div>
        <div class="content1_2">WHAT I DO</div>
@@ -156,8 +177,8 @@
     </div>
     <div class="content4">
   <div class="content4_1">ok</div>
-  <div class="content4_2">Subscribe to our newsletter to receive news, updates,
-    free stuff and new releases by email. I do not spam.</div>
+  <div class="content4_2">Welcome to my home page, my GitHub account is lockmyself.
+    TEL:13040808281, WeChat: 492588774, email: 492588774@qq.com</div>
     <div class="content4_3">
       <form action="" method="get">
     <div class="kuan" align="center"><input name="" type="text" /></div>
@@ -177,7 +198,7 @@
         </center>
         </div>
         <div class="footer_cpr">
-        <p>Copyright © 2014. All Rights Reserved. More Templates 模板之家 - Collect from 网页模板</p><br>
+        <p>Copyright © 2014. All Rights Reserved. More Templates Template home - Collect from Web Template</p><br>
           <p> Made With Love By @AirTheme</p>
 </div>
     </div>
